@@ -1,0 +1,225 @@
+/* Basic styles inspired by the example website */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F3F4F6;
+  }
+  
+  .hero {
+    background: #4c4c4c;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .about-us,
+  .portfolio,
+  .contact-us {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .about-us p,
+  .portfolio p,
+  .contact-us p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .portfolio-link,
+  .contact-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4c4c4c;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .portfolio-link:hover,
+  .contact-link:hover {
+    background-color: #333;
+  }
+  
+  .services {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .service {
+    padding: 20px;
+    background: #f4f4f4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  .icon-container {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    /* Add your custom icons' styles here */
+  }
+  /* ... */
+
+/* Updated Contact Form styles */
+.contact-form {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+  
+  .contact-form input[type='text'],
+  .contact-form input[type='tel'],
+  .contact-form input[type='email'],
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .contact-form input[type='text']:focus,
+  .contact-form input[type='tel']:focus,
+  .contact-form input[type='email']:focus,
+  .contact-form textarea:focus {
+    border-color: #4c4c4c;
+    outline: none;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .contact-form button {
+    background-color: #4c4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #333;
+  }
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input[type='text'],
+  .contact-form input[type='tel'],
+  .contact-form input[type='email'],
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 10px 4px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .contact-form input[type='text']:focus,
+  .contact-form input[type='tel']:focus,
+  .contact-form input[type='email']:focus,
+  .contact-form textarea:focus {
+    border-color: #4c4c4c;
+    outline: none;
+  }
+  
+  .contact-form label {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-size: 1rem;
+    color: #777;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+  
+  .contact-form input[type='text']:focus + label,
+  .contact-form input[type='text']:valid + label,
+  .contact-form input[type='tel']:focus + label,
+  .contact-form input[type='tel']:valid + label,
+  .contact-form input[type='email']:focus + label,
+  .contact-form input[type='email']:valid + label,
+  .contact-form textarea:focus + label,
+  .contact-form textarea:valid + label {
+    top: -18px;
+    left: 8px;
+    font-size: 0.8rem;
+    color: #4c4c4c;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+    padding-top: 12px;
+  }
+  
+  .contact-form button {
+    background-color: #4c4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #333;
+  }
+  .contact-form .input-group input.text-right,
+  .contact-form .input-group textarea.text-right {
+    direction: rtl;
+  }
+  
+  .contact-form .input-group label.text-right {
+    direction: rtl;
+    left: auto;
+    right: 10px;
+  }
+
+@keyframes slideIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-heading {
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
